@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"log/slog"
 
 	"github.com/spf13/cobra"
@@ -15,7 +14,7 @@ var gitCmd = &cobra.Command{
 	Short: "Check is current directory a git repository",
 	Long:  `✅ Check is current directory a git repository`,
 	Run: func(cmd *cobra.Command, args []string) {
-		slog.Info(fmt.Sprintf("✅  current directory is a git repository"))
+		slog.Info("✅  current directory is a git repository")
 	},
 	PreRun: func(cmd *cobra.Command, args []string) {
 		path.MustCurrentPath()
