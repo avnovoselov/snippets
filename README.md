@@ -1,5 +1,7 @@
 # Snippets
 
+![coverage](https://raw.githubusercontent.com/avnovoselov/snippets/badges/.badges/main/coverage.svg)
+
 ## Install
 
 ## Run
