@@ -3,12 +3,13 @@ package git
 import (
 	"fmt"
 	"log/slog"
-	"os"
+
+	"github.com/avnovoselov/snippets/internal/helpers/wrapper"
 )
 
 func MustRepository(path string) {
 	if !IsRepository(path) {
-		slog.Error(fmt.Sprintf("Path \"%s\" should by a git repository", path))
-		os.Exit(1)
+		slog.Error(fmt.Sprintf("Path \"%s\" should be a git repository", path))
+		wrapper.OSExit(1)
 	}
 }

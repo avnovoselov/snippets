@@ -2,14 +2,15 @@ package path
 
 import (
 	"log/slog"
-	"os"
+
+	"github.com/avnovoselov/snippets/internal/helpers/wrapper"
 )
 
 func MustCurrentPath() string {
-	path, err := os.Getwd()
+	path, err := wrapper.OSGetwd()
 	if err != nil {
 		slog.Error(err.Error())
-		os.Exit(1)
+		wrapper.OSExit(1)
 	}
 
 	return path
