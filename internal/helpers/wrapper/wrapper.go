@@ -1,6 +1,7 @@
 package wrapper
 
 import (
+	"fmt"
 	"os"
 	"os/exec"
 )
@@ -10,4 +11,6 @@ var (
 	OSExit  = os.Exit
 
 	ExecCommand = exec.Command
+
+	FMTPrintln = fmt.Println
 )

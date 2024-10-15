@@ -27,7 +27,7 @@ func init() {
 		slog.SetLogLoggerLevel(slog.LevelDebug)
 	}
 
-	rootCmd.AddCommand(gitCmd)
+	rootCmd.AddCommand(gitCmd, dockerCmd)
 }
 
 func Execute() {
