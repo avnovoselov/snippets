@@ -1,9 +1,8 @@
 package docker
 
 import (
+	"github.com/avnovoselov/snippets/internal/helpers/wrapper"
 	"strings"
-
-	"github.com/avnovoselov/snippets/internal/helpers/exec"
 )
 
 const eol = "\n"
@@ -14,7 +13,8 @@ const eol = "\n"
 //		/> docker ps --format {{.Names}}
 //	and split by line break
 func GetRunningContainers() ([]string, error) {
-	output, err := exec.Command("docker", "ps", "--format", "{{.Names}}")
+	cmd := wrapper.ExecCommand("docker", "ps", "--format", "{{.Names}}")
+	output, err := cmd.Output()
 
-	return strings.Split(output, eol), err
+	return strings.Split(string(output), eol), err
 }
