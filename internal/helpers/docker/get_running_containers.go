@@ -1,8 +1,9 @@
 package docker
 
 import (
-	"github.com/avnovoselov/snippets/internal/helpers/wrapper"
 	"strings"
+
+	"github.com/avnovoselov/snippets/internal/helpers/wrapper"
 )
 
 const eol = "\n"

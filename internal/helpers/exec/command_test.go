@@ -4,9 +4,10 @@ import (
 	osExec "os/exec"
 	"testing"
 
+	"github.com/stretchr/testify/require"
+
 	"github.com/avnovoselov/snippets/internal/helpers/exec"
 	"github.com/avnovoselov/snippets/internal/helpers/wrapper"
-	"github.com/stretchr/testify/require"
 )
 
 func TestCommand_Success(t *testing.T) {

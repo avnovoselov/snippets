@@ -1,13 +1,13 @@
 package docker_test
 
 import (
-	"github.com/avnovoselov/snippets/internal/helpers/wrapper"
 	"os/exec"
 	"testing"
 
 	"github.com/stretchr/testify/require"
 
 	"github.com/avnovoselov/snippets/internal/helpers/docker"
+	"github.com/avnovoselov/snippets/internal/helpers/wrapper"
 )
 
 func TestRunBashInContainer(t *testing.T) {
